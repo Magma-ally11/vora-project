@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Vora Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+
+    h1 {
+      font-size: 3.5em;
+      margin: 40px 0 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #ffffff;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #00ffe1, #0078ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: headerFlash 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes headerFlash {
+      0% {
+        text-shadow: 0 0 10px #00ffe1, 0 0 20px #0078ff;
+      }
+      100% {
+        text-shadow: 0 0 20px #00ffe1, 0 0 40px #0078ff;
+      }
+    }
+
+    #avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 10px auto 30px;
+      display: block;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .intro {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+      font-size: 1.3em;
+      line-height: 1.6em;
+      font-weight: 400;
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 120px;
+    }
+
+    .epic-header {
+      font-size: 2.4em;
+      margin-top: 40px;
+      font-weight: 600;
+      color: #ffffff;
+      text-shadow: 0 0 10px #00ffe1, 0 0 25px #0078ff;
+    }
+
+    .team-list {
+      margin: 30px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .member-block {
+      margin-bottom: 25px;
+      padding: 15px;
+      background: rgba(20, 20, 20, 0.75);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeInScale 0.8s ease forwards;
+    }
+
+    .member-block:nth-child(1) { animation-delay: 0.3s; }
+    .member-block:nth-child(2) { animation-delay: 0.5s; }
+    .member-block:nth-child(3) { animation-delay: 0.7s; }
+    .member-block:nth-child(4) { animation-delay: 0.9s; }
+    .member-block:nth-child(5) { animation-delay: 1.1s; }
+    .member-block:nth-child(6) { animation-delay: 1.3s; }
+
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .member-name {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .insta-link {
+      font-size: 1em;
+      color: #00ccff;
+      text-decoration: none;
+    }
+
+    .insta-link:hover {
+      text-decoration: underline;
+    }
+
+    .instruction-text {
+      margin-top: 40px;
+      font-size: 1.3em;
+      color: #ffffff;
+      text-shadow: 0 0 5px #00ccff;
+    }
+
+    .try-box {
+      display: inline-block;
+      background-color: rgba(10, 10, 10, 0.8);
+      padding: 15px 30px;
+      margin-top: 20px;
+      border-radius: 12px;
+      border: 2px solid #00ffe1;
+    }
+
+    .try-box a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .try-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <video class="bg-video" autoplay muted loop>
+    <source src="background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <h1>The Vora Project</h1>
+  <img id="avatar" src="urty.png" alt="VORA Avatar" />
+
+  <div class="intro" id="typewriter-text"></div>
+
+  <h2 class="epic-header">Presenting The Team</h2>
+  <div class="team-list">
+    <div class="member-block">
+      <div class="member-name">Dipan Pandeya</div>
+      <a class="insta-link" href="https://www.instagram.com/urthemellifluous/" target="_blank">Dipan Pandeya</a>
+    </div>
+    <div class="member-block">
+      <div class="member-name">Nakul Giri</div>
+      <a class="insta-link" href="https://www.instagram.com/nkg4_4_4/" target="_blank">Nakul Giri</a>
+    </div>
+    <div class="member-block">
+      <div class="member-name">Krish Paudel</div>
+      <a class="insta-link" href="https://www.instagram.com/krish__paudel__/" target="_blank">Krish Paudel</a>
+    </div>
+    <div class="member-block">
+      <div class="member-name">Krish Sharma</div>
+      <a class="insta-link" href="https://www.instagram.com/krishsharma____________/" target="_blank">Krish Sharma</a>
+    </div>
+    <div class="member-block">
+      <div class="member-name">Muskan Thapa Magar</div>
+      <a class="insta-link" href="https://www.instagram.com/mgrmuskan5/" target="_blank">Muskan Magar</a>
+    </div>
+    <div class="member-block">
+      <div class="member-name">Dipson Rijal</div>
+      <a class="insta-link" href="https://www.instagram.com/dipson_rijal_069/" target="_blank">Dipson Rijal</a>
+    </div>
+  </div>
+
+  <p class="instruction-text">
+    If you want to try the VORA-Voice Assistant, Click On the Box Below "Try VORA".
+  </p>
+
+  <div class="try-box">
+    <a href="https://virtualvora.vercel.app" target="_blank">Try VORA</a>
+  </div>
+
+  <script>
+    const text = "VORA is a voice assistant developed by a passionate group of high school innovators. It’s designed to respond to your voice and assist with queries, definitions, jokes, and even web searches. This project reflects curiosity, creativity, and collaboration.";
+    const target = document.getElementById("typewriter-text");
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        target.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 35);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
